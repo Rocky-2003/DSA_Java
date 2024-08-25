@@ -1,16 +1,23 @@
 public class Index {
 
-  public static int fun(int x) {
-    if (x == 0 || x == 1)
-      return x;
+  public static void fun(int x) {
+    int n = x;
+    int b = 0;
+    while (n >= 2) {
+      n = n / 2;
+      b++;
+    }
 
-    return fun(x - 1) + fun(x - 2);
+    if (Math.pow(2, b) == x) {
+      System.out.println("Yes");
+    } else {
+      System.out.println("Nooooo");
+    }
   }
 
   public static void main(String[] arg) {
 
-    int x = 3;
-    System.out.println(fun(x));
+   fun(16);
 
   }
 }
